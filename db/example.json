@@ -1,4 +1,10 @@
 {
   "users": [],
-  "books": []
+  "books": [
+    {
+      "title": "bookTest3",
+      "author": "authorTest3",
+      "date": "1571201448335"
+    }
+  ]
 }
