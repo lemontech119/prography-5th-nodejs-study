@@ -12,6 +12,20 @@
       "title": "bookTest3",
       "author": "authorTest3",
       "date": "1571201448335"
+    },
+    {
+      "id": "1",
+      "title": "bookTest3",
+      "author": "authorTest3",
+      "date": "1571322487159"
+    }
+  ],
+  "rentals": [
+    {
+      "id": "1",
+      "userId": "1",
+      "bookId": "1",
+      "date": "1571322691639"
     }
   ]
 }

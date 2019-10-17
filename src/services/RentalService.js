@@ -6,7 +6,7 @@ const User = require('../models/User');
 const Rental = require('../models/Rental');
 
 
-class RentalRepository {
+class RentalService {
 
     constructor(){
         this.bookRepository = new BookRepository();
@@ -14,10 +14,17 @@ class RentalRepository {
         this.rentalRepository = new RentalRepository();
     }
 
-    create(id, userId, bookId, date){
+    create(id, userId, bookId){
         const checkUser = User.fromData(this.userRepository.findById(userId));
-        
+        const checkBook = Book.fromData(this.bookRepository.findById(bookId));
+        console.log(checkUser);
+        console.log(checkBook)
+        userId = checkUser.id;
+        bookId = checkBook.id;
+        const rental = Rental.newInstance(id, userId, bookId);
+        this.rentalRepository.create(rental.toJSON());
+        return rental;
     }
 }
 
-module.exports = RentalRepository;
+module.exports = RentalService;
