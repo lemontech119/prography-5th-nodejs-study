@@ -1,5 +1,12 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "1",
+      "name": "rentalId1",
+      "password": "test",
+      "role": "normal"
+    }
+  ],
   "books": [
     {
       "title": "bookTest3",
