@@ -33,6 +33,11 @@ class RentalService {
         this.rentalRepository.create(rental.toJSON());
         return rental;
     }
+
+    find(){
+        const rentalData = this.rentalRepository.find();
+        return rentalData.map((rentalData) => Rental.fromData(rentalData));
+    }
 }
 
 module.exports = RentalService;

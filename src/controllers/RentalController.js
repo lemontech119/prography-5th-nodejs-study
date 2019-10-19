@@ -17,6 +17,15 @@ const createRental = (req, res)=>{
     })
 }
 
+const getRentals = (req, res)=>{
+    const rentalService = new RentalService();
+    const rentals = rentalService.find();
+    res.send({
+        data: rentals
+    })
+}
+
 module.exports = {
-    createRental
+    createRental,
+    getRentals
 }

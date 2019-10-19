@@ -21,7 +21,7 @@ class Rental {
     }
 
     static fromData(data){
-        return new Book(data.id, data.userId, data.bookId, data.date);
+        return new Rental(data.id, data.userId, data.bookId, data.date);
     }
 }
 
