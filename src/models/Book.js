@@ -23,6 +23,9 @@ class Book {
     }
 
     static fromData(data){
+        if(data == undefined){
+            return "No Book"
+        }
         return new Book(data.id, data.title, data.author, data.rentalYn, data.date);
     }
 }

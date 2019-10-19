@@ -7,8 +7,8 @@ class BookService{
         this.bookRepository = new BookRepository();
     }
 
-    create(id, title, author){
-        const book = Book.newInstance(id, title, author);
+    create(id, title, author, rentalYn){
+        const book = Book.newInstance(id, title, author, rentalYn);
         this.bookRepository.create(book.toJSON());
         return book;
     }
@@ -28,6 +28,7 @@ class BookService{
         book.title = data.title || book.title;
         book.author = data.author || book.author;
         book.date = data.date || book.date;
+        book.rentalYn = data.rentalYn || book.rentalYn;
         this.bookRepository.update(id, book.toJSON());
         return book;
     }

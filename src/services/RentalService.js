@@ -17,10 +17,18 @@ class RentalService {
     create(id, userId, bookId){
         const checkUser = User.fromData(this.userRepository.findById(userId));
         const checkBook = Book.fromData(this.bookRepository.findById(bookId));
-        console.log(checkUser);
-        console.log(checkBook)
-        userId = checkUser.id;
-        bookId = checkBook.id;
+
+        if(checkBook == "No Book"){
+            return "noBook"
+        }
+        if(checkBook.rentalYn == "Y"){
+            return "rentBook"
+        }
+        
+        checkBook.rentalYn = "Y";
+        checkBook.date = checkBook.date;
+        this.bookRepository.update(checkBook.id, checkBook.toJSON());
+
         const rental = Rental.newInstance(id, userId, bookId);
         this.rentalRepository.create(rental.toJSON());
         return rental;

@@ -18,6 +18,19 @@
       "title": "bookTest3",
       "author": "authorTest3",
       "date": "1571322487159"
+    },
+    {
+      "id": "2",
+      "title": "bookTest4",
+      "author": "authorTest4",
+      "date": "1571443659658"
+    },
+    {
+      "id": "3",
+      "title": "bookTest4",
+      "author": "authorTest4",
+      "rentalYn": "Y",
+      "date": "1571446762727"
     }
   ],
   "rentals": [
@@ -26,6 +39,30 @@
       "userId": "1",
       "bookId": "1",
       "date": "1571322691639"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "bookId": "2",
+      "date": "1571444676567"
+    },
+    {
+      "id": "3",
+      "userId": "1",
+      "bookId": "2",
+      "date": "1571444956348"
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "bookId": "2",
+      "date": "1571446356136"
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "bookId": "3",
+      "date": "1571446767534"
     }
   ]
 }
